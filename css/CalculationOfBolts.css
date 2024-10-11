@@ -1,0 +1,35 @@
+.back_button { /*Кнопка назад*/
+    text-decoration: none;
+    background-color: #6b9cff;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
+    border-radius: 8px;
+    margin: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 10px;
+    color: #fff;
+    position: relative;
+    top: 0px;
+    float: left;
+    width: 50px;
+}
+
+.main_text { /*Заголовок и литературный источник*/
+    margin: 0px;
+    width: 500px;
+    > h2, h3 {
+        margin: 0px;
+    }
+}
+
+.img_scheme { /*Картинка со схемой*/
+    float: left;
+    width: 300px;
+    margin: 10px;
+}
+
+.input_float { /*Картинка со схемой*/
+    float: left;
+    width: 300px;
+    margin: 10px;
+}

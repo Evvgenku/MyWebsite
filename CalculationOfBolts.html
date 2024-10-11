@@ -5,34 +5,37 @@
     <meta name="author" content="Евгений">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CalculationOfBolts</title>
+    <link rel="stylesheet" href="/css/CalculationOfBolts.css">
+    <script src="/JS/code.js"></script>
 </head>
 <body>
-    Тут будет расчет
-    <p><img src="/images/1.png" width="30%" height="auto" alt="Что то не так. Картинка не загружена"></p>
-    <p><table border="1" width="300px">
-        <thead>
-            <tr>
-                <th>Значение 1</th>
-                <th>Значение 2</th>
-            </tr>
-        </thead>
-        <tbody align="center">
-            <tr>
-                <td>Значение 3</td>
-                <td>Значение 4</td>
-            </tr>
-            
-            <tr>
-                <td>Значение 5</td>
-                <td>Значение 6</td>
-            </tr>
-        </tbody>
-        <tfoot align="center">
-            <tr>
-                <td>Значение 7</td>
-                <td>Значение 8</td>
-            </tr>
-        </tfoot>
-    </table></p>
+    <a href="/index.html" class="back_button">Назад</a> <!--Кнопка назад-->
+    <div class="main_text">
+        <h2 >Расчет фундаментных болтов</h2>
+        <h3>Используется методика, приведенная в</h3>
+    </div>
+    <div class="img_scheme">
+        <img src="/images/1.png" width="100%" alt="Что то не так. Картинка не загружена">
+    </div>
+    <div class="input_float">
+        <form action="">
+            <label for="b_side">Сторона B</label>
+            <input type="number" placeholder="мм"
+            name="b_side"
+            id="b_side"><br><br>
+            <label for="l_side">Сторона L</label>
+            <input type="number" placeholder="мм"
+            name="l_side"
+            id="l_side"><br><br>
+            <label for="bl">Площадь</label>
+            <input type="number" placeholder="мм"
+            name="area"
+            id="bl"
+            value=""
+            disabled><br><br>
+            <input type="button" class="area" value="Расчитать"><br><br>
+            <input type="reset" value="Очистить">
+        </form>
+    </div>
 </body>
 </html>
