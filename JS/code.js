@@ -19,12 +19,17 @@ function calcResult() {
     l = Number(document.getElementById('l_side').value);
     n = Number(document.getElementById('n').value);
     m = Number(document.getElementById('m').value);
+    t = Number(document.getElementById('t').value);
     console.log(b,l);
     console.log(n,m);
 
     setResistanceValue();
     setAreaValue();
     setSigmaValue();
+    calcC();
+    calcA();
+    calcY();
+    calcZ();
 };
 //Объявление переменных b, l, в которые будет записан результат работы функции get_bl()
 let b;
@@ -34,6 +39,11 @@ let m;
 let w1;
 let s_max;
 let s_min;
+let t;
+let c;
+let a;
+let y;
+let z;
 
 //Функция calcArea считает площадь опорной плиты. Значения вытягиваются из полей ввода
 function calcArea(a,b) {
@@ -82,6 +92,28 @@ function setSigmaValue() {
     document.getElementById('Gmin').value = sigmaMin(n,m);
 }
 
-// function calcY(l,t,c) {
-//     return l+t-c/3;
-// }
+function calcC() {
+   c = sigmaMax(n,m)/(sigmaMax(n,m)+sigmaMin(n,m));
+   document.getElementById('c').value = c;
+}
+
+function calcA() {
+    a = (l/2)-(c/3);
+    document.getElementById('a').value = a;
+}
+
+function calcY() {
+    if (!t) {
+        alert('Не введено значение t');
+    }
+    else {
+        y = l + t - (c/3);
+        document.getElementById('y').value = y;
+    };
+}
+
+function calcZ() {
+    z = (m - (n*a))/y;
+    document.getElementById('z').value = z;
+    document.getElementById('z').className = (!z) ? "notCalcZ" : "CalcZ";
+}

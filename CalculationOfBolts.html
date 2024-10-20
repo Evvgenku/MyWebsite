@@ -22,46 +22,72 @@
         </div>
         <div class="input_area">
             <form action="">
-                <label for="b_side">Сторона B</label>
-                <input type="number" placeholder="мм"
+                <label for="b_side" class="label1">Сторона B</label>
+                <input type="number" placeholder="м"
                 name="b_side"
                 id="b_side">
-                <p class="mm">мм</p><br><br>
-                <label for="l_side">Сторона L</label>
-                <input type="number" placeholder="мм"
+                <p class="mm">м</p><br><br>
+
+                <label for="l_side" class="label1">Сторона L</label>
+                <input type="number" placeholder="м"
                 name="l_side"
                 id="l_side">
-                <p class="mm">мм</p><br><br>
-                <label for="bl">Площадь&nbsp;&nbsp;</label>
-                <input type="number" placeholder="мм"
-                name="area"
-                id="bl"
-                value=""
-                disabled>
-                <p class="mm">мм<sup>2</sup></p><br><br>
+                <p class="mm">м</p><br><br>
+
+                <label for="n" class="label1">Усилие N</label>
+                <input type="number" id="n" value="" placeholder="т">
+                <p class="mm">т</p><br><br>
+
+                <label for="m" class="label1">Усилие M</label>
+                <input type="number" id="m" value="" placeholder="т*м">
+                <p class="mm">т*м</p><br><br>
+
+                <label for="t" class="label1">t</label>
+                <input type="number" placeholder="м"
+                name="t"
+                id="t">
+                <p class="mm">м</p><br><br>
+
                 <input type="button" id="area" value="Расчитать" onclick="calcResult()"><br><br>
                 <input type="reset" value="Очистить">
             </div>
             <div class="input_power">
-                <label for="n">Усилие N</label>
-                <input type="number" id="n" value="" placeholder="т">
-                <p class="mm">т</p><br><br>
 
-                <label for="m">Усилие M</label>
-                <input type="number" id="m" value="" placeholder="т*м">
-                <p class="mm">т*м</p><br><br>
+                <label for="bl" class="label2">Площадь&nbsp;&nbsp;</label>
+                <input type="number" placeholder="м"
+                name="area"
+                id="bl"
+                value=""
+                disabled>
+                <p class="mm">м<sup>2</sup></p><br><br>
 
-                <label for="w">Момент сопротивления</label>
-                <input type="number" id="w" value="" placeholder="" disabled>
+                <label for="w" class="label2">Момент сопротивления</label>
+                <input type="number" id="w" value="" placeholder="м3" disabled>
                 <p class="mm">м<sup>3</sup></p><br><br>
 
-                <label for="Gmax">σ<sub>max</sub></label>
+                <label for="Gmax" class="label2">σ<sub>max</sub></label>
                 <input type="number" id="Gmax" value="" placeholder="Т/м2" disabled>
                 <p class="mm">т/м<sup>2</sup></p><br><br>
 
-                <label for="Gmax">σ<sub>min</sub></label>
+                <label for="Gmax" class="label2">σ<sub>min</sub></label>
                 <input type="number" id="Gmin" value="" placeholder="Т/м2" disabled>
                 <p class="mm">т/м<sup>2</sup></p><br><br>
+
+                <label for="c" class="label2">c</label>
+                <input type="number" id="c" value="" placeholder="м" disabled>
+                <p class="mm">м</p><br><br>
+
+                <label for="a" class="label2">a</label>
+                <input type="number" id="a" value="" placeholder="м" disabled>
+                <p class="mm">м</p><br><br>
+
+                <label for="y" class="label2">y</label>
+                <input type="number" id="y" value="" placeholder="м" disabled>
+                <p class="mm">м</p><br><br>
+
+                <label for="z" class="label2">Z</label>
+                <input type="number" id="z" value="" placeholder="т" disabled class="notCalcZ">
+                <p class="mm">т</p><br><br>
             </form>
         </div>
     </div>
