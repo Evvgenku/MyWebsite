@@ -61,16 +61,17 @@ function setAreaValue() {
 };
 
 function setResistanceValue() { //Момент сопротивления BL^2/6
-    w1 = ((b*l^2)/6);
-    document.getElementById('w').value = ((b*l^2)/6);
+    w1 = ((b*l**2)/6);
+    document.getElementById('w').value = ((b*(l**2))/6);
 };
 
 function sigmaMax(n1,m1) {
-    console.log(n1,m1);
+    console.log("sigmaMax");
     if (!n1 || !m1) {
         alert('Не введено одно из усилий')
     }
     else {
+        console.log(n1,calcArea(b,l),m1,w1);
         return (n1/calcArea(b,l))+(m1/w1);
     };
     //Gmax = // N/A + M/W
@@ -113,7 +114,7 @@ function calcY() {
 }
 
 function calcZ() {
-    z = (m - (n*a))/y;
+    z = (m - (n*a))/(y*2);
     document.getElementById('z').value = z;
     document.getElementById('z').className = (!z) ? "notCalcZ" : "CalcZ";
 }
